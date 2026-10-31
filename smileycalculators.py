@@ -71,8 +71,11 @@ while True:
 
                     
             elif operator == "/":
-                result = num1 / num2
-                print(f"The quotient is: {result}") 
+                if num2 == 0:
+                    print("Cannot divide by zero")
+                else:
+                    result = num1 / num2
+                    print(f"The quotient is: {result}")
             
                 
             else:
@@ -205,7 +208,7 @@ while True:
                 c = math.sqrt(c2)
                 print(f"The hypotinuse is {c} units long")
 
-            elif trianglemethod == "OL":
+            elif trianglemethod == "OS":
                 print("You are looking for one side of the triangle that isn't the hypotinuse")
                 a = float(input("What is the value of a or b?: "))
                 c = float(input("What is the value of c?: "))
@@ -263,3 +266,4 @@ while True:
     print(restarting)
     print("-" * 200)
     time.sleep(5)
+
